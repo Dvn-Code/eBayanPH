@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
         // In real application, fetch from database
         $_SESSION['user'] = [
             'email' => $email,
-            'first_name' => 'Juan',
+            'first_name' => 'Juann',
             'middle_name' => 'Santos',
             'last_name' => 'Dela Cruz',
             'birthday' => '1990-01-15',
