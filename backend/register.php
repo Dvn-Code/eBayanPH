@@ -1,5 +1,5 @@
 <?php
-    include "../includes/config.php";
+    include __DIR__ . '/../includes/config.php';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $first_name       = $_POST['first_name'];
@@ -26,17 +26,21 @@
         } else {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-            $sql = "INSERT INTO users 
-                    (first_name, middle_name, last_name, birthday, gender, contact, email, house_num, street, barangay, city, password) 
+            $sql = "INSERT INTO ebayan 
+                    (first_name, middle_name, last_name, dob, gender, contact_num, email, house_num, street, barangay, city, password) 
                     VALUES 
-                    ('$first_name', '$middle_name', '$last_name', '$birthday', '$gender', '$contact', '$email', '$house_num', '$street', '$barangay', '$city', '$hashed_password')";
+                    (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-            if (mysqli_query($connection, $sql)) {
-                header("Location: ../index.php");
+            $stmt = mysqli_prepare($connection, $sql);
+            mysqli_stmt_bind_param($stmt, "ssssssssssss", $first_name, $middle_name, $last_name, $birthday, $gender, $contact, $email, $house_num, $street, $barangay, $city, $hashed_password);
+
+            if (mysqli_stmt_execute($stmt)) {
+                header("Location: index.php?page=home&show_verify=1");
                 exit();
             } else {
                 echo "Error: " . mysqli_error($connection);
             }
+            mysqli_stmt_close($stmt);
         }
     }
 ?>

@@ -26,6 +26,36 @@
             
             <div class="divider">or</div>
             
+            <?php
+                include __DIR__ . '/../includes/config.php';
+                
+                if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
+                    $email = $_POST['email'];
+                    $password = $_POST['password'];
+                    
+                    $sql = "SELECT * FROM ebayan WHERE email = ?";
+                    $stmt = mysqli_prepare($connection, $sql);
+                    mysqli_stmt_bind_param($stmt, "s", $email);
+                    mysqli_stmt_execute($stmt);
+                    $result = mysqli_stmt_get_result($stmt);
+                    
+                    if (mysqli_num_rows($result) > 0) {
+                        $user = mysqli_fetch_assoc($result);
+                        if (password_verify($password, $user['password'])) {
+                            $_SESSION['user_id'] = $user['id'];
+                            $_SESSION['email'] = $user['email'];
+                            header("Location: ?page=home");
+                            exit();
+                        } else {
+                            echo '<p style="color: red; text-align: center;">Invalid password</p>';
+                        }
+                    } else {
+                        echo '<p style="color: red; text-align: center;">Email not found</p>';
+                    }
+                    mysqli_stmt_close($stmt);
+                }
+            ?>
+            
             <form method="POST" action="">
                 <div class="form-group">
                     <label for="email">Email Address</label>

@@ -26,7 +26,7 @@
             
             <div class="divider">or</div>
             
-            <form method="POST" action="">
+            <form method="POST" action="index.php">
                 <!-- Name Fields -->
                 <div class="form-row-3">
                     <div class="form-group">
