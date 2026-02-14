@@ -25,6 +25,11 @@
                 <h3>Health Services</h3>
                 <p>Free health screening and vaccination schedule at various barangay health centers.</p>
             </div>
+            <div class="card">
+                <div class="card-icon">📓</div>
+                <h3>Class Suspension</h3>
+                <p>Information on class suspensions due to weather or other emergencies.</p>
+            </div>
         </div>
     </div>
 </div>

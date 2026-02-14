@@ -2,7 +2,8 @@
 // Determine which navigation to show based on the current page
 $mainPages = ['home', 'announcements', 'services', 'profile', 'settings', 'faq', 'about', 'admin-subscribe'];
 $cebuPages = ['cebu-city', 'cebu-announcements', 'cebu-services', 'cebu-complaints'];
-$pardoPages = ['pardo', 'pardo-announcements', 'pardo-services', 'pardo-complaints', 'pardo-officials'];
+$pardoPages = ['pardo', 'pardo-announcements', 'pardo-services', 'pardo-complaints', 'pardo-officials', 'hire-talent', 'apply-talent', 'barangay-clearance', 'emergency-services'];
+
 
 if (in_array($page, $mainPages)) {
     $navType = 'main';
@@ -18,9 +19,15 @@ if (in_array($page, $mainPages)) {
 <nav class="navbar">
     <div class="nav-container">
         <div class="nav-brand">
-            <div class="seal"><?php echo $navType === 'main' ? 'EB' : ($navType === 'cebu' ? 'CC' : 'PR'); ?></div>
+            <div class="seal">
+                <?php if ($navType === 'main'): ?>
+                    <img src="/ebayan-v2/pictures/final_logo.png" alt="eBayan Logo" class="nav-seal-image" width="100" height="50">
+                <?php else: ?>
+                    <?php echo $navType === 'cebu' ? '<img src="/ebayan-v2/pictures/final_logo.png" alt="eBayan Logo" class="nav-seal-image" width="132" height="84">' : '<img src="/ebayan-v2/pictures/final_logo.png" alt="eBayan Logo" class="nav-seal-image" width="132" height="84">'; ?>
+                <?php endif; ?>
+            </div>
             <h2><?php 
-                echo $navType === 'main' ? 'eBayan Portal' : ($navType === 'cebu' ? 'Cebu City' : 'Barangay Pardo'); 
+                echo $navType === 'main' ? 'eBayan' : ($navType === 'cebu' ? 'Cebu City' : 'Barangay Pardo'); 
             ?></h2>
         </div>
         
@@ -119,6 +126,11 @@ if (in_array($page, $mainPages)) {
                     <a href="?action=logout" class="user-dropdown-item logout">
                         <span>🚪</span>
                         <span>Logout</span>
+
+
+
+
+
                     </a>
                 </div>
             </div>
@@ -161,5 +173,27 @@ if (in_array($page, $mainPages)) {
 
 .nav-area .dropdown-menu {
     min-width: 220px;
+}
+
+/* Navbar-specific seal overrides: remove yellow circle and enlarge logo */
+.nav-brand .seal {
+    background: transparent; /* remove accent/yellow */
+    width: 88px; /* larger */
+    height: 56px; /* wider rectangle to better show logo */
+    border-radius: 8px; /* subtle rounding instead of circle */
+    box-shadow: none;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-brand .seal img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain; /* ensure full logo is visible */
+    display: block;
+    border-radius: 6px;
 }
 </style>

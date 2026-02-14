@@ -157,7 +157,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : ($isLoggedIn ? 'home' : 'login');
 // Redirect to login if not logged in and trying to access protected pages
 $protectedPages = ['home', 'announcements', 'services', 'complaints', 'cebu-city', 'cebu-announcements', 
                     'cebu-services', 'cebu-complaints', 'pardo', 'pardo-announcements', 'pardo-services', 
-                    'pardo-complaints', 'pardo-officials', 'profile', 'settings', 'faq', 'about', 'admin-subscribe'];
+                    'pardo-complaints', 'pardo-officials', 'emergency-services', 'profile', 'settings', 'faq', 'about', 'admin-subscribe'];
 if (in_array($page, $protectedPages) && !$isLoggedIn) {
     header('Location: index.php?page=login');
     exit();
@@ -219,6 +219,9 @@ if (in_array($page, $protectedPages) && !$isLoggedIn) {
     <?php endif;
     
     switch($page) {
+        case 'barangay-clearance':
+            include 'pages/barangay-clearance.php';
+            break;
         case 'home':
             include 'pages/home.php';
             break;
@@ -258,8 +261,17 @@ if (in_array($page, $protectedPages) && !$isLoggedIn) {
         case 'pardo-officials':
             include 'pages/pardo-officials.php';
             break;
+        case 'emergency-services':
+            include 'pages/emergency-services.php';
+            break;
         case 'profile':
             include 'pages/profile.php';
+            break;
+        case 'hire-talent':
+            include 'pages/hire-talent.php';
+            break;
+        case 'apply-talent':
+            include 'pages/apply-talent.php';
             break;
         case 'settings':
             include 'pages/settings.php';

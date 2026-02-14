@@ -11,10 +11,11 @@
         <div class="hero-content">
             <h1>Welcome to Barangay Pardo</h1>
             <p>Your local barangay government serving the community with dedication and transparency.</p>
+            <img src="/ebayan-v2/pictures/pardo_logo.png" alt="Barangay Pardo Logo" class="pardo-logo">
         </div>
     </div>
 
-    <div class="city-image">Barangay Pardo</div>
+    <div class="pardo-image"></div>
 
     <div class="section">
         <h2 class="section-title">About Barangay Pardo</h2>

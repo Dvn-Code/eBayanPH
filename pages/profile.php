@@ -20,7 +20,21 @@
     <?php endif; ?>
 
     <div class="profile-card">
+
         <div class="profile-header">
+                    <!-- Apply as a Talent Section -->
+<div class="apply-talent-section">
+    <div class="apply-talent-content">
+        <div class="apply-talent-icon">💼</div>
+        <div class="apply-talent-text">
+            <h3>Join Our Talent Platform</h3>
+            <p>Share your skills and connect with residents looking for professional services.</p>
+        </div>
+        <a href="index.php?page=apply-talent" class="btn-apply-talent">
+            Apply as a Talent
+        </a>
+    </div>
+</div>
             <div class="profile-avatar">
                 <?php echo strtoupper(substr($currentUser['first_name'], 0, 1)); ?>
             </div>
