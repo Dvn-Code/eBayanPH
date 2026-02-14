@@ -82,7 +82,8 @@ body {
 .login-container {
     min-height: 100vh;
     display: flex;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    background: url('/ebayan-v2/pictures/background_login.png') center/cover no-repeat fixed;
+    background-size: cover;
     position: relative;
     overflow: hidden;
 }
@@ -147,6 +148,7 @@ body {
 }
 
 .login-welcome {
+    font-family: Arial;
     color: var(--white);
     animation: slideInLeft 0.8s ease-out 0.2s both;
 }
@@ -712,7 +714,8 @@ body {
 }
 
 .section-title {
-    font-family: 'Libre Baskerville', serif;
+    font-family: "Arial";
+    font-weight: bold;
     font-size: 2.5rem;
     color: var(--text-dark);
     margin-bottom: 1.5rem;
@@ -978,3 +981,15 @@ body {
         text-align: center;
     }
 }
+
+    .logo-image {
+        width: 500px;
+        height: 500px;
+        object-fit: contain;
+    }
+    .gov-image {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        margin-top: 2rem;
+    }
