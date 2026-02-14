@@ -9,10 +9,11 @@
         <div class="hero-content">
             <h1>Welcome to Cebu City</h1>
             <p>The Queen City of the South - Access local government services, information, and support for Cebu City residents.</p>
+            <img src="/ebayan-v2/pictures/cebucity_logo.png" alt="Cebu City Logo" class="cebu-logo">
         </div>
     </div>
 
-    <div class="city-image">Cebu City</div>
+    <div class="citycebu-image"></div>
 
     <div class="section">
         <h2 class="section-title">About Cebu City</h2>
@@ -23,11 +24,6 @@
     </div>
 
     <div class="content-grid">
-        <div class="card">
-            <div class="card-icon">🏘️</div>
-            <h3>Barangay Services</h3>
-            <p>Access services and information from all 80 barangays in Cebu City.</p>
-        </div>
         <div class="card">
             <div class="card-icon">📋</div>
             <h3>City Ordinances</h3>

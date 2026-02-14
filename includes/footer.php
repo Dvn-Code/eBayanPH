@@ -2,7 +2,7 @@
 // Determine footer text based on current page
 $mainPages = ['home', 'announcements', 'services', 'complaints'];
 $cebuPages = ['cebu-city', 'cebu-announcements', 'cebu-services', 'cebu-complaints'];
-$pardoPages = ['pardo', 'pardo-announcements', 'pardo-services', 'pardo-complaints', 'pardo-officials'];
+$pardoPages = ['pardo', 'pardo-announcements', 'pardo-services', 'pardo-complaints', 'pardo-officials', 'hire-talent', 'apply-talent', 'barangay-clearance'];
 
 if (in_array($page, $cebuPages)) {
     $footerText = 'Cebu City Government';

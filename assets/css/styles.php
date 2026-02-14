@@ -27,6 +27,9 @@ body {
     background: var(--bg-light);
     overflow-x: hidden;
     animation: fadeIn 0.6s ease-out;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 @keyframes fadeIn {
@@ -85,7 +88,6 @@ body {
     background: url('/ebayan-v2/pictures/background_login.png') center/cover no-repeat fixed;
     background-size: cover;
     position: relative;
-    overflow: hidden;
 }
 
 .login-container::before {
@@ -121,7 +123,41 @@ body {
     margin-bottom: 3rem;
     animation: slideInLeft 0.8s ease-out;
 }
+.hero {
+    position: relative;
+}
 
+/* Logo styling */
+.cebu-logo {
+    width: 200px;      
+    height: 200px;
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    opacity: 0.9;
+}
+.pardo-logo {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    opacity: 0.9;
+}
+.citycebu-image {
+    width: 100%;
+    height: 400px;
+    background: url('/ebayan-v2/pictures/cebucity_back.png') center/cover no-repeat;
+    border-radius: 16px;
+    margin: 2rem 0;
+}
+.pardo-image{
+    width: 100%;
+    height: 400px;
+    background: url('/ebayan-v2/pictures/pardo_image.png') center/cover no-repeat;
+    border-radius: 16px;
+    margin: 2rem 0;
+}
 @keyframes slideInLeft {
     from { opacity: 0; transform: translateX(-30px); }
     to { opacity: 1; transform: translateX(0); }
@@ -158,24 +194,24 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.2;
+    margin-left: 30%;
+    margin-bottom: 10%;
 }
 
 .login-welcome p {
     font-size: 1.125rem;
     opacity: 0.9;
-    max-width: 500px;
+    max-width: 1000px;
 }
 
 .login-right {
     flex: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     padding: 2rem;
-    position: relative;
-    z-index: 1;
+    padding-top: 3rem;
     overflow-y: auto;
-    max-height: 100vh;
 }
 
 .login-box {
@@ -188,6 +224,16 @@ body {
     animation: slideInRight 0.8s ease-out 0.3s both;
     margin: 2rem 0;
 }
+.signup-box {
+    width: 200%;
+    max-width: 900px;
+    background: var(--white);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
 
 @keyframes slideInRight {
     from { opacity: 0; transform: translateX(30px); }
@@ -282,7 +328,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     text-decoration: none;
 }
 
@@ -614,29 +660,36 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem 4rem;
+    width: 100%;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, rgba(10, 58, 110, 0.95), rgba(30, 90, 158, 0.9)),
+    background: linear-gradient(to right, #0a3a6ef2, rgba(30, 90, 158, 0.9)),
                 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%230A3A6E" width="1200" height="600"/><path fill="%231E5A9E" opacity="0.3" d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z"/></svg>');
     background-size: cover;
     background-position: center;
+    background: linear-gradient(to right, #044e9c, #1e5a9e);
     border-radius: 16px;
     padding: 4rem 3rem;
     margin-bottom: 3rem;
     color: var(--white);
-    box-shadow: 0 12px 40px var(--shadow);
+    transition: all 0.3s ease;
+}
+.hero:hover{
+    transform: translateY(-4px);
+    box-shadow: 5px 10px 10px rgba(5, 5, 5, 0.3);
 }
 
 .hero-content h1 {
-    font-family: 'Libre Baskerville', serif;
+    font-family: Arial;
     font-size: 3.5rem;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
 
 .hero-content p {
+    font-family: Arial;
     font-size: 1.25rem;
     opacity: 0.95;
     max-width: 700px;
@@ -692,8 +745,7 @@ body {
 .city-image {
     width: 100%;
     height: 500px;
-    background: linear-gradient(135deg, rgba(10, 58, 110, 0.3), rgba(30, 90, 158, 0.3)),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500"><rect fill="%23E1E8ED" width="1200" height="500"/><rect fill="%230A3A6E" opacity="0.1" x="100" y="150" width="120" height="350"/><rect fill="%230A3A6E" opacity="0.15" x="250" y="100" width="150" height="400"/><rect fill="%230A3A6E" opacity="0.12" x="430" y="180" width="100" height="320"/><rect fill="%230A3A6E" opacity="0.18" x="560" y="80" width="180" height="420"/><rect fill="%230A3A6E" opacity="0.1" x="770" y="200" width="130" height="300"/><rect fill="%230A3A6E" opacity="0.14" x="930" y="120" width="160" height="380"/><circle fill="%23FDB913" opacity="0.4" cx="100" cy="100" r="80"/></svg>');
+    background: url('/ebayan-v2/pictures/home_pic.png') center/cover no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 16px;
@@ -906,7 +958,7 @@ body {
     background: var(--primary);
     color: var(--white);
     padding: 3rem 2rem;
-    margin-top: 4rem;
+    margin-top: auto;  /* Push footer to bottom */
 }
 
 .footer-content {
@@ -986,10 +1038,93 @@ body {
         width: 500px;
         height: 500px;
         object-fit: contain;
+        margin-left: 28%;
     }
     .gov-image {
         width: 100px;
         height: 100px;
         object-fit: contain;
         margin-top: 2rem;
+        margin-left: 200%;
     }
+    .apply-talent-section {
+    width: 600px; /* Fixed clean width */
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-left: 4px solid #FDB913;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.apply-talent-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.apply-talent-icon {
+    font-size: 3rem;
+}
+
+.apply-talent-text {
+    flex: 1;
+}
+
+.apply-talent-text h3 {
+    color: #0A3A6E;
+    margin-bottom: 0.5rem;
+}
+
+.apply-talent-text p {
+    color: #5A6C7D;
+    margin: 0;
+}
+
+.btn-apply-talent {
+    background: linear-gradient(135deg, #FDB913 0%, #FFD700 100%);
+    color: #1A2332;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(253, 185, 19, 0.3);
+    transition: all 0.3s;
+    
+}
+
+.btn-apply-talent:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(253, 185, 19, 0.4);
+}
+
+.emergency-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal boxes in one row */
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Make boxes same height */
+.emergency-grid > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Responsive fix */
+@media (max-width: 992px) {
+    .emergency-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .emergency-grid {
+        grid-template-columns: 1fr;
+    }
+}

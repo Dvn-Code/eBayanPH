@@ -7,6 +7,9 @@
 <div class="main-content">
     <div class="subscription-card">
         <h2>🏛️ ADMIN Subscription</h2>
+        <br>
+        <h2>₱1,990.00 <span style="font-size: 1rem;">PHP /month (inclusive of VAT)</span></h2>
+        <br>
         <p style="font-size: 1.125rem; margin-bottom: 1rem;">Manage your barangay services and connect with your community through eBayan</p>
         
         <ul class="perks">

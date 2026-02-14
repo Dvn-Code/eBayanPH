@@ -3,10 +3,11 @@
         <div class="hero-content">
             <h1>Welcome to eBayan</h1>
             <p>Your gateway to government services, announcements, and information across the Republic of the Philippines. We are committed to serving you with transparency and efficiency.</p>
+            <img src ="/ebayan-v2/pictures/final_logo.png" alt="eBayan Logo" class="cebu-logo">
         </div>
     </div>
 
-    <div class="city-image">Republic of the Philippines</div>
+    <div class="city-image"></div>
 
     <div class="section">
         <h2 class="section-title">About Our Portal</h2>
@@ -15,30 +16,7 @@
             <p style="margin-top: 1.5rem;">Through this portal, you can access city-specific information, file complaints, view official announcements, and utilize various government services from the comfort of your home. We are committed to digital transformation and making government services accessible to everyone.</p>
         </div>
     </div>
-
-    <div class="content-grid">
-        <div class="card">
-            <div class="card-icon">🏛️</div>
-            <h3>Government Services</h3>
-            <p>Access a wide range of government services including document requests, permits, and certifications.</p>
-        </div>
-        <div class="card">
-            <div class="card-icon">📢</div>
-            <h3>Official Announcements</h3>
-            <p>Stay updated with the latest government announcements, programs, and important information.</p>
-        </div>
-        <div class="card">
-            <div class="card-icon">🏙️</div>
-            <h3>City Information</h3>
-            <p>Explore detailed information about cities and barangays across the Philippines.</p>
-        </div>
-        <div class="card">
-            <div class="card-icon">📝</div>
-            <h3>File Complaints</h3>
-            <p>Submit complaints and concerns to your local government for prompt resolution.</p>
-        </div>
-    </div>
-
+    
     <div class="section">
         <h2 class="section-title">Subscribe as Admin</h2>
         <div class="subscription-card">

@@ -25,6 +25,11 @@
                 <h3>Health Centers</h3>
                 <p>Locate and access services from city health centers and hospitals.</p>
             </div>
+            <div class="card">
+                <div class="card-icon">🚌</div>
+                <h3>Transportation</h3>
+                <p>Locate and access services from city transportation providers and bus terminals.</p>
+            </div>
         </div>
     </div>
 </div>

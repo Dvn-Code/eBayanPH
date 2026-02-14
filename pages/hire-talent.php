@@ -30,7 +30,7 @@ $talents = [
         'contact' => '+63 912 345 6702',
         'location' => 'Pardo, Cebu City',
         'rating' => 4.9,
-        'image' => '🔧',
+        'image' => '👷',
         'description' => 'Licensed plumber. Services include pipe installation, repair, and water system maintenance.'
     ],
     [
@@ -43,7 +43,7 @@ $talents = [
         'contact' => '+63 912 345 6703',
         'location' => 'Pardo, Cebu City',
         'rating' => 4.7,
-        'image' => '⚡',
+        'image' => '👷',
         'description' => 'Certified electrician for residential and commercial wiring, lighting, and electrical troubleshooting.'
     ],
     [
@@ -56,7 +56,7 @@ $talents = [
         'contact' => '+63 912 345 6704',
         'location' => 'Pardo, Cebu City',
         'rating' => 5.0,
-        'image' => '🪚',
+        'image' => '👷',
         'description' => 'Master carpenter specializing in custom furniture, cabinetry, and woodwork installations.'
     ],
     [
@@ -69,7 +69,7 @@ $talents = [
         'contact' => '+63 912 345 6705',
         'location' => 'Pardo, Cebu City',
         'rating' => 4.6,
-        'image' => '🎨',
+        'image' => '👷',
         'description' => 'Professional house painter. Interior and exterior painting, wall finishing, and decorative work.'
     ],
     [
@@ -82,7 +82,7 @@ $talents = [
         'contact' => '+63 912 345 6706',
         'location' => 'Pardo, Cebu City',
         'rating' => 4.8,
-        'image' => '🔥',
+        'image' => '👷',
         'description' => 'Skilled welder for metal fabrication, gate installation, and structural steel work.'
     ],
     [
@@ -95,7 +95,7 @@ $talents = [
         'contact' => '+63 912 345 6707',
         'location' => 'Pardo, Cebu City',
         'rating' => 4.7,
-        'image' => '🔲',
+        'image' => '👷',
         'description' => 'Expert in floor and wall tiling, bathroom and kitchen installations, tile repair and replacement.'
     ],
     [
@@ -108,7 +108,7 @@ $talents = [
         'contact' => '+63 912 345 6708',
         'location' => 'Pardo, Cebu City',
         'rating' => 4.9,
-        'image' => '🏠',
+        'image' => '👷',
         'description' => 'Roofing specialist for installation, repair, and maintenance. Works with various roofing materials.'
     ],
     [
@@ -121,7 +121,7 @@ $talents = [
         'contact' => '+63 912 345 6709',
         'location' => 'Pardo, Cebu City',
         'rating' => 4.5,
-        'image' => '🌳',
+        'image' => '👷',
         'description' => 'Garden design and maintenance, lawn care, tree trimming, and outdoor beautification services.'
     ],
     [
@@ -134,7 +134,7 @@ $talents = [
         'contact' => '+63 912 345 6710',
         'location' => 'Pardo, Cebu City',
         'rating' => 4.8,
-        'image' => '❄️',
+        'image' => '👷',
         'description' => 'Air conditioning installation, repair, and maintenance. Refrigeration and ventilation services.'
     ],
     [
@@ -147,7 +147,7 @@ $talents = [
         'contact' => '+63 912 345 6711',
         'location' => 'Pardo, Cebu City',
         'rating' => 4.6,
-        'image' => '🪟',
+        'image' => '👷',
         'description' => 'Glass and aluminum installation for windows, doors, sliding frames, and shower enclosures.'
     ],
     [
@@ -160,7 +160,7 @@ $talents = [
         'contact' => '+63 912 345 6712',
         'location' => 'Pardo, Cebu City',
         'rating' => 4.4,
-        'image' => '💪',
+        'image' => '👷',
         'description' => 'Reliable general construction helper. Assists with various tasks, material handling, and cleanup.'
     ]
 ];
@@ -198,7 +198,7 @@ $talentCount = count($filteredTalents);
         <!-- Left Sidebar - Filters -->
         <div class="filters-sidebar" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content; position: sticky; top: 20px;">
             <h3 style="color: #0A3A6E; font-size: 1.2rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid #E1E8ED;">
-                🔍 Filters
+                 Filters
             </h3>
 
             <form method="GET" action="">
@@ -266,7 +266,7 @@ $talentCount = count($filteredTalents);
                 </button>
                 
                 <!-- Clear Filters Button -->
-                <a href="?page=hire-talent" style="display: block; width: 100%; padding: 0.875rem; background: #E1E8ED; color: #1A2332; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s; font-size: 0.9rem; text-align: center; text-decoration: none;">
+                <a href="?page=hire-talent" style="display: block; margin-left: 43px; width: 50%; padding: 0.875rem; background: #E1E8ED; color: #1A2332; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s; font-size: 0.9rem; text-align: center; text-decoration: none;">
                     Clear All Filters
                 </a>
             </form>
