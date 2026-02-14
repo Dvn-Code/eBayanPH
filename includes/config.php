@@ -1,7 +1,10 @@
 <?php
-$connection = mysqli_connect('localhost', 'root', '', 'hackathon', 3307);
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+$connection = mysqli_connect('localhost', 'root', '', 'hackathon', 3306);
 
 if (!$connection) {
-    echo "Ded";
+    die("Database connection failed: " . mysqli_connect_error());
 }
 ?>

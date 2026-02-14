@@ -1,5 +1,5 @@
 <?php
-session_start();
+include "includes/config.php";
 
 // Check if user is logged in
 $isLoggedIn = isset($_SESSION['user']);
@@ -17,26 +17,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     
-    // Simple validation (in production, check against database)
     if (!empty($email) && !empty($password)) {
-        // In real application, fetch from database
-        $_SESSION['user'] = [
-            'email' => $email,
-            'first_name' => 'Juan',
-            'middle_name' => 'Santos',
-            'last_name' => 'Dela Cruz',
-            'birthday' => '1990-01-15',
-            'gender' => 'Male',
-            'contact' => '09123456789',
-            'house_num' => '123',
-            'street' => 'Main Street',
-            'barangay' => 'Pardo',
-            'city' => 'Cebu City',
-            'is_verified' => false,
-            'is_admin' => false
-        ];
-        header('Location: index.php?page=home');
-        exit();
+        $sql = "SELECT * FROM ebayan WHERE email = ?";
+        $stmt = mysqli_prepare($connection, $sql);
+        mysqli_stmt_bind_param($stmt, "s", $email);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        
+        if (mysqli_num_rows($result) > 0) {
+            $user = mysqli_fetch_assoc($result);
+            if (password_verify($password, $user['password'])) {
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['user'] = [
+                    'id' => $user['id'],
+                    'email' => $user['email'],
+                    'first_name' => $user['first_name'],
+                    'middle_name' => $user['middle_name'],
+                    'last_name' => $user['last_name'],
+                    'birthday' => $user['dob'],
+                    'gender' => $user['gender'],
+                    'contact' => $user['contact_num'],
+                    'house_num' => $user['house_num'],
+                    'street' => $user['street'],
+                    'barangay' => $user['barangay'],
+                    'city' => $user['city'],
+                    'is_verified' => $user['is_verified'] ?? false,
+                    'is_admin' => $user['is_admin'] ?? false
+                ];
+                header('Location: index.php?page=home');
+                exit();
+            } else {
+                $login_error = "Invalid password";
+            }
+        } else {
+            $login_error = "Email not found";
+        }
+        mysqli_stmt_close($stmt);
+    } else {
+        $login_error = "Please enter email and password";
     }
 }
 
@@ -57,6 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
         'is_verified' => false,
         'is_admin' => false
     ];
+    include __DIR__ .'/backend/register.php';
     header('Location: index.php?page=home&show_verify=1');
     exit();
 }
