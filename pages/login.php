@@ -1,13 +1,13 @@
 <div class="login-container">
     <div class="login-left">
         <div class="login-logo">
-            <div class="seal">EB</div>
-            <h1>eBayan Portal</h1>
+            <!-- <div class="seal">EB</div> --><img src="pictures/final_logo.png" alt="eBayan Logo" class="logo-image">
         </div>
         <div class="login-welcome">
-            <h2>Welcome to<br>eBayan</h2>
+            <h2>Welcome to eBayan</h2>
             <p>Access government services, announcements, and information for all citizens of the Republic of the Philippines.</p>
         </div>
+        <img src="pictures/gov_logo.png" alt = "gov logo"class="gov-image">
     </div>
     <div class="login-right">
         <div class="login-box">
