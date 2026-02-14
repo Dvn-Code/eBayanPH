@@ -36,8 +36,8 @@
             Barangay
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Tisa</a></li>
-            <li><a class="dropdown-item" href="#">Pardo</a></li>
+            <li><a class="dropdown-item" href="#">Bulacaosssss</a></li>
+            <li><a class="dropdown-item" href="#">Pardoss</a></li>
             <li><a class="dropdown-item" href="#">Urgello</a></li>
             <li><a class="dropdown-item" href="#">Mabolo</a></li>
           </ul>
